@@ -1,0 +1,42 @@
+{
+   "clientId":122632017,
+   "shiftModelId":155581628,
+   "shiftSelector":[
+      [
+         0,
+         null,
+         true
+      ],
+      155581628,
+      49,
+      46,
+      0,
+      16,
+      1637622000000,
+      1637708400000,
+      "SKB-46-16"
+   ],
+   "desiredDate":null,
+   "dateOfBirthString":"21.12.1991",
+   "streetAndHouseNumber":"Buesingstr. 3",
+   "postalCode":"12161",
+   "city":"Berlin",
+   "phoneMobile":"+393472724839",
+   "type":"booking",
+   "participants":[
+      {
+         "isBookingPerson":true,
+         "tariffId":155589630,
+         "dateOfBirthString":"21.12.1991",
+         "firstName":"Marco",
+         "lastName":"Gregorini",
+         "email":"gregorini.marco91@gmail.com",
+         "additionalFieldValue":"100072385",
+         "dateOfBirth":"1991-12-21"
+      }
+   ],
+   "firstName":"Marco",
+   "lastName":"Gregorini",
+   "email":"gregorini.marco91@gmail.com",
+   "dateOfBirth":"1991-12-21"
+}
