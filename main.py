@@ -2,6 +2,8 @@ from datetime import date, datetime, timedelta
 import inspect
 import logging
 from typing import Dict, List
+
+from pytz import timezone
 import requests
 import os
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, \
@@ -42,11 +44,17 @@ def _get_user_id(update: Update) -> int:
 
 
 def easy_to_read(date_str: str) -> str:
-    return (datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%SZ") + timedelta(hours=1)).strftime("%H:%M")
+    return (datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%SZ")) \
+        .replace(tzinfo=timezone("UTC")) \
+        .astimezone(timezone("Europe/Berlin"))\
+        .strftime("%H:%M")
 
 
 def easy_to_read_date(date_str: str) -> str:
-    return (datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%SZ") + timedelta(hours=1)).strftime("%d.%m.%Y")
+    return (datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%SZ"))\
+        .replace(tzinfo=timezone("UTC")) \
+        .astimezone(timezone("Europe/Berlin"))\
+        .strftime("%d.%m.%Y")
 
 
 def user_exist(user_id: int) -> bool:
